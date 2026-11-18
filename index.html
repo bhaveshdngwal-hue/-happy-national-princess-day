@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy National Princess Day, My Princess Kanak 👑🌻</title>
+  <!-- Google Fonts: Cormorant Garamond (Editorial Serif), Plus Jakarta Sans (Clean Sans), Caveat (Handwriting) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating Ambient Canvas (Petals, Stars & Cursor Hearts) -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <!-- Music Control Floating Pill -->
+  <div class="music-control" id="music-toggle" title="Toggle Fairytale Melody">
+    <span class="music-icon" id="music-icon">🎵</span>
+    <span class="music-text" id="music-label">Play Music</span>
+  </div>
+  <!-- Replace 'music.mp3' with your own audio file in the same folder -->
+  <audio id="bg-music" loop>
+    <source src="Yes, yes i love you it’s so easy to say to do reverb slowed carrozzeria music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- =========================================================
+       1. OPENING SCREEN – A MAGICAL SURPRISE
+       ========================================================= -->
+  <section id="welcome-screen" class="welcome-screen">
+    <div class="welcome-glow"></div>
+    <div class="welcome-card glass-card">
+      <div class="crown-badge">👑</div>
+      <p class="subtitle-tag">A Little Digital World Made Just For You</p>
+      <h1 class="welcome-title">Happy National Princess Day,<br /><span>My Princess Kanak! 👑</span></h1>
+      <p class="welcome-desc">
+        Today is all about celebrating the sunshine, warmth, and magic you bring into my life every single day.
+      </p>
+      <button id="open-surprise-btn" class="btn-primary">
+        Open Your Little Surprise 💌
+      </button>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       MAIN WEBSITE CONTENT (Revealed smoothly after opening)
+       ========================================================= -->
+  <main id="main-content" class="main-content hidden">
+
+    <!-- HERO & SUNFLOWER BOUQUET SECTION -->
+    <section id="bouquet-section" class="section bouquet-section">
+      <div class="container">
+        <span class="section-eyebrow">Especially For You</span>
+        <h2 class="section-title">Your Favourite Sunflower Bouquet 🌻</h2>
+        <p class="bouquet-quote">"For the girl who makes my world brighter."</p>
+
+        <!-- Interactive Illustrated Bouquet -->
+        <div class="bouquet-stage" id="bouquet-stage">
+          <div class="bouquet-aura"></div>
+          <div class="bouquet-wrapper" id="bouquet-wrapper">
+            <!-- Detailed SVG Sunflower Bouquet with Golden Wrapping Paper & Pink Ribbon -->
+            <svg class="bouquet-svg" viewBox="0 0 420 460" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <!-- Golden Kraft Paper Gradient -->
+                <linearGradient id="paperBack" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#f6d365" />
+                  <stop offset="100%" stop-color="#d4a038" />
+                </linearGradient>
+                <linearGradient id="paperLeft" x1="0%" y1="0%" x2="100%" y2="80%">
+                  <stop offset="0%" stop-color="#fff3d1" />
+                  <stop offset="55%" stop-color="#f2c968" />
+                  <stop offset="100%" stop-color="#c9932c" />
+                </linearGradient>
+                <linearGradient id="paperRight" x1="100%" y1="0%" x2="0%" y2="80%">
+                  <stop offset="0%" stop-color="#fffae8" />
+                  <stop offset="55%" stop-color="#e8bc54" />
+                  <stop offset="100%" stop-color="#b8821e" />
+                </linearGradient>
+                <!-- Sunflower Petal Gradient -->
+                <radialGradient id="petalGrad" cx="50%" cy="50%" r="50%">
+                  <stop offset="20%" stop-color="#ff9e00" />
+                  <stop offset="70%" stop-color="#ffd000" />
+                  <stop offset="100%" stop-color="#ffe97d" />
+                </radialGradient>
+                <!-- Sunflower Center Gradient -->
+                <radialGradient id="seedGrad" cx="40%" cy="40%" r="60%">
+                  <stop offset="0%" stop-color="#5c3317" />
+                  <stop offset="75%" stop-color="#3a1d0b" />
+                  <stop offset="100%" stop-color="#241004" />
+                </radialGradient>
+                <!-- Soft Pink Silk Ribbon Gradient -->
+                <linearGradient id="ribbonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ffb3c6" />
+                  <stop offset="50%" stop-color="#ff8fab" />
+                  <stop offset="100%" stop-color="#fb6f92" />
+                </linearGradient>
+              </defs>
+
+              <!-- Back Wrapping Paper Cone -->
+              <polygon points="105,155 210,35 315,155 245,390 175,390" fill="url(#paperBack)" />
+              <polygon points="120,160 210,50 300,160 240,385 180,385" fill="#fff9e6" opacity="0.55" />
+
+              <!-- Lush Greenery Leaves -->
+              <g class="bouquet-leaves">
+                <ellipse cx="115" cy="185" rx="34" ry="16" transform="rotate(-35 115 185)" fill="#588157" />
+                <ellipse cx="305" cy="185" rx="34" ry="16" transform="rotate(35 305 185)" fill="#588157" />
+                <ellipse cx="145" cy="125" rx="30" ry="14" transform="rotate(-55 145 125)" fill="#6a994e" />
+                <ellipse cx="275" cy="125" rx="30" ry="14" transform="rotate(55 275 125)" fill="#6a994e" />
+                <ellipse cx="210" cy="105" rx="28" ry="14" transform="rotate(-90 210 105)" fill="#386641" />
+                <!-- Stems -->
+                <path d="M150,210 Q190,300 205,425" stroke="#4a7c59" stroke-width="6" fill="none" stroke-linecap="round" />
+                <path d="M270,210 Q230,300 215,425" stroke="#4a7c59" stroke-width="6" fill="none" stroke-linecap="round" />
+                <path d="M210,160 L210,430" stroke="#386641" stroke-width="7" fill="none" stroke-linecap="round" />
+              </g>
+
+              <!-- Container where JS generates 7 layered Sunflowers -->
+              <g id="sunflowers-group"></g>
+
+              <!-- Front Folded Golden Wrapping Paper -->
+              <polygon points="95,215 210,310 185,395 165,395" fill="url(#paperLeft)" />
+              <polygon points="325,215 210,310 235,395 255,395" fill="url(#paperRight)" />
+              <polygon points="112,225 210,310 308,225 242,392 178,392" fill="url(#paperLeft)" opacity="0.92" />
+
+              <!-- Cute Satin Pink Ribbon & Bow -->
+              <g class="bouquet-ribbon" transform="translate(210, 322)">
+                <!-- Ribbon Tails -->
+                <path d="M-8,8 Q-35,45 -52,82 L-34,76 L-24,90 Q-12,48 -2,12 Z" fill="url(#ribbonGrad)" />
+                <path d="M8,8 Q35,45 52,82 L34,76 L24,90 Q12,48 2,12 Z" fill="url(#ribbonGrad)" />
+                <!-- Ribbon Band -->
+                <rect x="-34" y="-8" width="68" height="16" rx="8" fill="#fb6f92" />
+                <!-- Left & Right Bow Loops -->
+                <path d="M-4,0 C-38,-32 -62,-5 -44,18 C-30,32 -10,12 -4,4 Z" fill="url(#ribbonGrad)" />
+                <path d="M4,0 C38,-32 62,-5 44,18 C30,32 10,12 4,4 Z" fill="url(#ribbonGrad)" />
+                <!-- Center Knot -->
+                <rect x="-11" y="-10" width="22" height="20" rx="7" fill="#ff4d6d" />
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="bouquet-actions">
+          <button id="accept-bouquet-btn" class="btn-primary">
+            Accept Your Sunflowers 🌻
+          </button>
+          <p id="bouquet-response" class="bouquet-response"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. LONG EMOTIONAL FRIENDSHIP LETTER 💌
+         ========================================================= -->
+    <section id="letter-section" class="section letter-section">
+      <div class="container">
+        <span class="section-eyebrow">Straight From My Heart</span>
+        <h2 class="section-title">A Letter For My Favourite Human – Kanak 💌</h2>
+
+        <div class="letter-envelope-box">
+          <button id="unfold-letter-btn" class="btn-secondary">
+            Unfold & Read Your Letter 📜
+          </button>
+
+          <article id="vintage-letter" class="vintage-letter collapsed">
+            <div class="wax-seal">👑</div>
+            <div class="letter-header">
+              <span class="letter-date">National Princess Day • Forever & Always</span>
+              <h3>Dearest Kanak,</h3>
+            </div>
+            <div id="letter-body" class="letter-body"></div>
+            <div id="letter-signature" class="letter-signature hidden">
+              <p>Forever cheering for you,</p>
+              <p class="handwritten-sign">Your Best Friend 💛🌻</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. CUTE FRIENDSHIP FLASHCARDS 🎀
+         ========================================================= -->
+    <section id="flashcards-section" class="section flashcards-section">
+      <div class="container">
+        <span class="section-eyebrow">Tap Each Card To Flip</span>
+        <h2 class="section-title">Little Notes For Princess Kanak 🎀</h2>
+
+        <div class="flashcards-grid" id="flashcards-grid">
+          <!-- Cards populated cleanly via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         6. PREMIUM ADDITIONAL FEATURES ✨
+         ========================================================= -->
+    <!-- A. Reasons Counter + Secret Message Unlock -->
+    <section id="interactive-magic-section" class="section">
+      <div class="container two-col-grid">
+        <!-- Feature: Reasons Why You're My Favourite Counter -->
+        <div class="glass-card magic-box">
+          <span class="badge-pill">✨ Endless List</span>
+          <h3>Reasons Why You're My Favourite</h3>
+          <div class="counter-display">
+            <span id="reason-number">01</span>
+            <p id="reason-text">Your laugh instantly fixes even my worst days.</p>
+          </div>
+          <button id="next-reason-btn" class="btn-primary">
+            Show Another Reason 💛
+          </button>
+        </div>
+
+        <!-- Feature: Secret Locked Message -->
+        <div class="glass-card magic-box secret-box">
+          <span class="badge-pill">🔒 Princess Eyes Only</span>
+          <h3>A Secret Note Just For You</h3>
+          <div id="secret-locked" class="secret-state">
+            <div class="lock-icon">🔐</div>
+            <p>There's a hidden promise tucked inside here for Kanak.</p>
+            <button id="unlock-secret-btn" class="btn-secondary">
+              Unlock Secret Message ✨
+            </button>
+          </div>
+          <div id="secret-unlocked" class="secret-state hidden">
+            <p class="secret-reveal-text">
+              "No matter where life takes us, how busy things get, or how many years pass—you will always have a permanent home in my heart. Whenever you feel tired or unsure, lean on me. I’ve got your back, always. 🌻💛"
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- B. Interactive Sunflower Garden -->
+    <section id="garden-section" class="section garden-section">
+      <div class="container">
+        <span class="section-eyebrow">Plant Some Sunshine</span>
+        <h2 class="section-title">Kanak’s Magical Sunflower Garden 🌼</h2>
+        <p class="section-sub">Click anywhere inside the golden meadow below to bloom a sunflower with a sweet wish!</p>
+
+        <div id="sunflower-garden" class="sunflower-garden glass-card">
+          <div id="garden-toast" class="garden-toast">Tap anywhere in the garden to plant a sunflower ✨</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- C. Friendship Timeline -->
+    <section id="timeline-section" class="section timeline-section">
+      <div class="container">
+        <span class="section-eyebrow">Our Story So Far</span>
+        <h2 class="section-title">Moments That Became Core Memories ✨</h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot">🌻</div>
+            <div class="timeline-card glass-card">
+              <span class="timeline-tag">Chapter One</span>
+              <h3>The Day Everything Clicked</h3>
+              <p>From casual hellos to realizing we speak the exact same language—that's when life got infinitely better.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot">😂</div>
+            <div class="timeline-card glass-card">
+              <span class="timeline-tag">Chapter Two</span>
+              <h3>Uncontrollable Laughs & Endless Talks</h3>
+              <p>Hours feeling like five minutes, inside jokes nobody else gets, and talking about everything and nothing.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot">🤍</div>
+            <div class="timeline-card glass-card">
+              <span class="timeline-tag">Chapter Three</span>
+              <h3>Through Every High & Low</h3>
+              <p>Being each other's safe space, hyping each other up, and knowing we never have to face anything alone.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot">👑</div>
+            <div class="timeline-card glass-card">
+              <span class="timeline-tag">Today & Always</span>
+              <h3>Celebrating Princess Kanak</h3>
+              <p>Here’s to a million more adventures, coffee dates, late-night rants, and watching you shine brighter every year.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- D. Customizable Memory Photo Gallery -->
+    <section id="gallery-section" class="section gallery-section">
+      <div class="container">
+        <span class="section-eyebrow">Our Polaroid Wall</span>
+        <h2 class="section-title">Captured Sunshine & Memories 📸</h2>
+        <p class="section-sub">Click any frame below to upload your favourite photos of us directly in your browser!</p>
+
+        <div class="gallery-grid">
+          <label class="polaroid-card" title="Click to add photo">
+            <input type="file" accept="image/*" class="photo-input" hidden />
+            <div class="polaroid-frame">
+              <img src="https://images.unsplash.com/photo-1597848212624-a19eb35e2651?auto=format&fit=crop&w=600&q=80" alt="Memory 1" />
+              <span class="upload-hint">📷 Tap to replace photo</span>
+            </div>
+            <p class="polaroid-caption">Pure Sunshine Energy 🌻</p>
+          </label>
+
+          <label class="polaroid-card" title="Click to add photo">
+            <input type="file" accept="image/*" class="photo-input" hidden />
+            <div class="polaroid-frame">
+              <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=600&q=80" alt="Memory 2" />
+              <span class="upload-hint">📷 Tap to replace photo</span>
+            </div>
+            <p class="polaroid-caption">My Favourite Laugh 💛</p>
+          </label>
+
+          <label class="polaroid-card" title="Click to add photo">
+            <input type="file" accept="image/*" class="photo-input" hidden />
+            <div class="polaroid-frame">
+              <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80" alt="Memory 3" />
+              <span class="upload-hint">📷 Tap to replace photo</span>
+            </div>
+            <p class="polaroid-caption">Unforgettable Days ✨</p>
+          </label>
+
+          <label class="polaroid-card" title="Click to add photo">
+            <input type="file" accept="image/*" class="photo-input" hidden />
+            <div class="polaroid-frame">
+              <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=600&q=80" alt="Memory 4" />
+              <span class="upload-hint">📷 Tap to replace photo</span>
+            </div>
+            <p class="polaroid-caption">Partners In Everything 👑</p>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- E. Personalized Digital Princess Certificate -->
+    <section id="certificate-section" class="section certificate-section">
+      <div class="container">
+        <div class="certificate-card">
+          <div class="cert-border">
+            <div class="cert-crown">👑</div>
+            <p class="cert-kicker">OFFICIAL ROYAL PROCLAMATION</p>
+            <h2 class="cert-heading">Certificate of Royal Awesomeness</h2>
+            <p class="cert-text">This certifies that</p>
+            <h3 class="cert-name">Princess Kanak</h3>
+            <p class="cert-body">
+              is officially recognized as the brightest sunflower, the sweetest soul, and the reigning Princess of Hearts on this National Princess Day and every day hereafter.
+            </p>
+            <div class="cert-footer">
+              <div>
+                <span class="cert-sign">Approved with Love</span>
+                <small>Official Best Friend Seal</small>
+              </div>
+              <div class="cert-gold-seal">🌻<br />ROYAL</div>
+              <div>
+                <span class="cert-sign" id="cert-date">National Princess Day</span>
+                <small>Valid Forever</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Glowing Banner -->
+    <section class="glow-banner-section">
+      <div class="glowing-message-box">
+        <p class="glowing-text">✨ You're Loved More Than You Know ✨</p>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         8. FINAL SURPRISE SCREEN
+         ========================================================= -->
+    <footer id="final-screen" class="final-screen">
+      <div class="container">
+        <div class="final-card glass-card">
+          <div class="final-bouquet-icon">🌻👑🌻</div>
+          <h2 class="final-heading">To My Princess Kanak,</h2>
+          <p class="final-message">
+            You don't need a crown to be special. You already make the world brighter just by being in it.<br /><br />
+            Stay happy, keep smiling, and never forget how precious you are to me.<br /><br />
+            <strong>Happy National Princess Day, my sunflower girl! 🌻👑💛</strong>
+          </p>
+
+          <button id="hug-btn" class="btn-primary hug-btn">
+            One More Hug? 🫂
+          </button>
+          <p id="hug-counter-text" class="hug-counter-text"></p>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
